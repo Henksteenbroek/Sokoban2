@@ -36,8 +36,7 @@ namespace Sokoban.View
                     Console.WriteLine();
                 }
             }
-            Console.Write(game.Last.FieldChar);
-            Console.ReadLine();
+            Console.WriteLine(game.Last.FieldChar);
         }
     }
 }
