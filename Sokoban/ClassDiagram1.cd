@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Sokoban.Controller.MainController">
+    <Position X="9.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAIAAAAAAAAAAAAAAAAAAAAQIAAAAAAAQAAA=</HashCode>
+      <FileName>Controller\MainController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="game" />
+      <Field Name="mazeView" />
+      <Field Name="inputView" />
+      <Field Name="reader" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sokoban.Model.MazeReader">
+    <Position X="12.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAgAAAAAAAAAAAAAAAIAAAIAAAAAAA=</HashCode>
+      <FileName>Controller\MazeReader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.Program">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Controller\Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.Model.Crate">
+    <Position X="3.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Crate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.Model.Field">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAJIAMDAABAAAAAAAAAAAAIAAAAACBCAAAAAUAI=</HashCode>
+      <FileName>Model\Field.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.Model.Game">
+    <Position X="3.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAEEAAARAACACAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Model\Game.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="First" />
+      <Property Name="Last" />
+      <Property Name="Truck" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Crates" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Sokoban.Model.MoveableObject">
+    <Position X="4" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAACAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\MoveableObject.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Location" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sokoban.Model.Truck">
+    <Position X="5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Truck.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.View.InputView">
+    <Position X="9.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIABAAAAAgAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\InputView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.View.MazeView">
+    <Position X="5.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAgAAAAAAAAAAAAAACAQAIAAAAAAAAAAA=</HashCode>
+      <FileName>View\MazeView.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="game" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="Sokoban.Model.Direction">
+    <Position X="12.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAIAAAAAAAAAgAAgAA=</HashCode>
+      <FileName>Model\Direction.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Sokoban.Model.FieldType">
+    <Position X="12.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAgAAAAAAAIAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Model\FieldType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

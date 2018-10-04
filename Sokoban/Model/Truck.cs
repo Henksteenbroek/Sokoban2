@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Sokoban.Model
 {
-    public class Truck
+    public class Truck : MoveableObject
     {
         
     }

@@ -42,14 +42,18 @@ namespace Sokoban.Model
                     Target = Truck;
                     break;
             }
-            Target.hasTruck = true;
-            Truck.hasTruck = false;
-            Truck.assignCharacter();
-            Target.assignCharacter();
-            Truck = Target;
+            if(Target != null && Target.FieldType != FieldType.wall)
+            {
+                Target.hasTruck = true;
+                Truck.hasTruck = false;
+                Truck.assignCharacter();
+                Target.assignCharacter();
+                Truck = Target;
+            }
+            
         }
 
-        public void moveCrate(int direction)
+        public void moveCrate(int direction, Field crate)
         {
             
         }
