@@ -42,13 +42,13 @@ namespace Sokoban.Model
                             break;
                         case 'o':
                             levelFields[y, x] = new Field(FieldType.floor);
-                            levelFields[y, x].Crate = new Crate();
-                            game.Crates.Add(levelFields[y, x].Crate);
+                            levelFields[y, x].hasCrate = true;
+                            game.Crates.Add(levelFields[y, x]);
                             break;
                         case '@':
                             levelFields[y, x] = new Field(FieldType.floor);
-                            levelFields[y, x].Truck = game.Truck = new Truck();
-                            game.Truck.Location = levelFields[y, x];
+                            levelFields[y, x].hasTruck = true;
+                            game.Truck = levelFields[y, x];
                             break;
                         default:
                             levelFields[y, x] = null;
@@ -76,13 +76,13 @@ namespace Sokoban.Model
                 {
                     if (x + 1 != fields.GetLength(1) && fields[y, x + 1] != null)
                     {
-                        fields[y, x].FieldRight = fields[y, x + 1];
-                        fields[y, x + 1].FieldLeft = fields[y, x];
+                        fields[y, x].Right = fields[y, x + 1];
+                        fields[y, x + 1].Left = fields[y, x];
                     }
                     if (y + 1 != fields.GetLength(0) && fields[y + 1, x] != null)
                     {
-                        fields[y, x].FieldDown = fields[y + 1, x];
-                        fields[y + 1, x].FieldUp = fields[y + 1, x];
+                        fields[y, x].Down = fields[y + 1, x];
+                        fields[y + 1, x].Up = fields[y + 1, x];
                     }
                 }
             }

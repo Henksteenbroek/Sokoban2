@@ -2,7 +2,7 @@
 {
     public class MoveableObject
     {
-        public Field Location { get; set }
+        public Field Location { get; set; }
 
         public void move(Direction direction)
         {
