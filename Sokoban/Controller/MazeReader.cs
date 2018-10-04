@@ -50,6 +50,9 @@ namespace Sokoban.Model
                             levelFields[y, x].hasTruck = true;
                             game.Truck = levelFields[y, x];
                             break;
+                        case ' ':
+                            levelFields[y, x] = new Field(FieldType.space);
+                            break;
                         default:
                             levelFields[y, x] = null;
                             Console.WriteLine("Unidentified char at " + x + "," + y);

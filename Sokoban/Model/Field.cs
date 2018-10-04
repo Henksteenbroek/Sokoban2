@@ -70,6 +70,9 @@ namespace Sokoban.Model
                 case FieldType.wall:
                     FieldChar = '█';
                     break;
+                case FieldType.space:
+                    FieldChar = ' ';
+                    break;
             }
         }
     }
