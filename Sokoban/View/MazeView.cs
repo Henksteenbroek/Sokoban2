@@ -17,6 +17,17 @@ namespace Sokoban.View
             this.game = game;
         }
 
+        public void showBoard()
+        {
+            Console.Clear();
+            Console.WriteLine("┌──────────┐   ");
+            Console.WriteLine("| Sokoban  |   ");
+            Console.WriteLine("└──────────┘   ");
+            Console.WriteLine("─────────────────────────────────────────────────────────────────────────");
+            printFields();
+            Console.WriteLine("─────────────────────────────────────────────────────────────────────────");
+        }
+
         public void showStartingScreen()
         {
             Console.WriteLine("┌────────────────────────────────────────────────────┐");
@@ -36,7 +47,7 @@ namespace Sokoban.View
             Console.WriteLine("> Kies een doolhof (1 - 4), s = stop");
         }
 
-        public void printFields()
+        private void printFields()
         {
             Field temp1 = game.First;
             Field temp2 = game.First;

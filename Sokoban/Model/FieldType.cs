@@ -11,5 +11,6 @@ namespace Sokoban.Model
         wall,
         floor,
         goal,
+        space,
     }
 }
