@@ -17,7 +17,7 @@ namespace Sokoban.View
 
         }
 
-        public int readInput()
+        public ConsoleKeyInfo validInputGiven()
         {
             bool validInputGiven = false;
 
@@ -27,14 +27,19 @@ namespace Sokoban.View
                 key = Console.ReadKey();
                 if (key.Key != ConsoleKey.UpArrow && key.Key != ConsoleKey.DownArrow && key.Key != ConsoleKey.LeftArrow && key.Key != ConsoleKey.RightArrow && key.Key != ConsoleKey.S && key.Key != ConsoleKey.R)
                 {
-                    Console.WriteLine("Gebruik alleen de pijltjestoetsen of 's' of 'r'");
+                    Console.WriteLine(" is geen geldig teken, gebruik de pijltestoetsen of 's' of 'r'");
                 }
                 else
                 {
                     validInputGiven = true;
                 }
             }
+            return key;
+        }
 
+        public int readInput(ConsoleKeyInfo key)
+        {
+            this.key = key;
             switch (key.Key)
             {
                 case ConsoleKey.UpArrow:

@@ -20,26 +20,34 @@ namespace Sokoban.Model
             Crates = new List<Field>();
         }
 
-        public void moveTruck(Direction direction)
+        public void moveTruck(int direction)
         {
 
         }
 
-        public void moveCrate(Direction direction)
+        public void moveCrate(int direction)
         {
 
         }
 
-        //public bool gameFinished()
-        //{
-        //    foreach (Field item in Crates)
-        //    {
-        //        if (!item.OnGoal)
-        //        {
-        //            return false;
-        //        }
-        //    }
-        //    return true;
-        //}
+        public bool gameFinished()
+        {
+            Field temp1 = First;
+            Field temp2 = First;
+
+            while (temp1 != Last)
+            {
+                if (temp1 != null && temp1.hasCrate && temp1.FieldType != FieldType.goal)
+                {
+                    return false;
+                }
+                else if (temp2.Down != null)
+                {
+                    temp1 = temp2.Down;
+                    temp2 = temp2.Down;
+                }
+            }
+            return true;
+        }
     }
 }

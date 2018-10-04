@@ -12,7 +12,7 @@ namespace Sokoban.Controller
     {
         Game game;
         MazeReader reader;
-        //InputView inputView;
+        InputView inputView;
         MazeView mazeView;
         public MainController()
         {
@@ -20,8 +20,18 @@ namespace Sokoban.Controller
             reader = new MazeReader(game);
             reader.CreateLinks(reader.ReadMaze(4));
             mazeView = new MazeView(game);
-            mazeView.showStartingScreen();
+            inputView = new InputView();
+            run();
             Console.ReadLine();
+        }
+
+        public void run()
+        {
+            while (true)
+            {
+                mazeView.showBoard();
+                game.moveTruck(inputView.readInput(inputView.validInputGiven()));
+            }
         }
     }
 }
