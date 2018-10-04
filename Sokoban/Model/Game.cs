@@ -30,11 +30,6 @@ namespace Sokoban.Model
 
         }
 
-        public bool hasClearPath(Direction direction)
-        {
-            return true;
-        }
-
         //public bool gameFinished()
         //{
         //    foreach (Field item in Crates)

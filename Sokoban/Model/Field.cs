@@ -43,6 +43,10 @@ namespace Sokoban.Model
             return false;
         }
 
+        public bool hasClearPath(Direction direction)
+        {
+            return true;
+        }
 
         public void assignCharacter()
         {

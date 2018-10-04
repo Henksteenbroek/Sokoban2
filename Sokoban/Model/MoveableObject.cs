@@ -9,7 +9,6 @@
             switch (direction)
             {
                 case Direction.up:
-
                     break;
                 case Direction.down:
                     break;
