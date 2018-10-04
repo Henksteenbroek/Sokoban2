@@ -20,14 +20,38 @@ namespace Sokoban.Model
             Crates = new List<Field>();
         }
 
-        public void moveTruck(Direction direction)
+        public void moveTruck(int direction)
         {
+            Field Target;
 
+            switch (direction)
+            {
+                case 0:
+                    Target = Truck.Up;
+                    break;
+                case 1:
+                    Target = Truck.Down;
+                    break;
+                case 2:
+                    Target = Truck.Left;
+                    break;
+                case 3:
+                    Target = Truck.Right;
+                    break;
+                default:
+                    Target = Truck;
+                    break;
+            }
+            Target.hasTruck = true;
+            Truck.hasTruck = false;
+            Truck.assignCharacter();
+            Target.assignCharacter();
+            Truck = Target;
         }
 
-        public void moveCrate(Direction direction)
+        public void moveCrate(int direction)
         {
-
+            
         }
 
         //public bool gameFinished()

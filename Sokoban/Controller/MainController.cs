@@ -18,9 +18,11 @@ namespace Sokoban.Controller
         {
             game = new Game();
             reader = new MazeReader(game);
-            reader.CreateLinks(reader.ReadMaze(4));
+            reader.CreateLinks(reader.ReadMaze(1));
             mazeView = new MazeView(game);
-            mazeView.showStartingScreen();
+            mazeView.showBoard();
+            game.moveTruck(3);
+            mazeView.showBoard();
             Console.ReadLine();
         }
     }

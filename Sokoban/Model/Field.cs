@@ -36,17 +36,38 @@ namespace Sokoban.Model
 
         public bool isEmpty()
         {
-            if (hasTruck == true && hasCrate == true && FieldType != FieldType.wall)
+            if (hasTruck == false && hasCrate == false && FieldType != FieldType.wall)
             {
                 return true;
             }
             return false;
         }
 
-        public bool hasClearPath(Direction direction)
-        {
-            return true;
+        public bool hasClearPath(int direction)
+        { 
+            switch(direction)
+            {
+                case 0:
+                    if (this.Up.isEmpty())
+                        return true;
+                    break;
+                case 1:
+                    if (this.Down.isEmpty())
+                        return true;
+                    break;
+                case 2:
+                    if (this.Left.isEmpty())
+                        return true;
+                    break;
+                case 3:
+                    if (this.Right.isEmpty())
+                        return true;
+                    break;
+            }
+
+            return false;
         }
+
 
         public void assignCharacter()
         {
