@@ -63,5 +63,30 @@ namespace Sokoban.View
             }
             return returnValue;
         }
+
+        public int getMazeNumber()
+        {
+            bool validInputGiven = false;
+            char c = ' ';
+            string s = " ";
+            int number = 0;
+            while (!validInputGiven)
+            {
+                key = Console.ReadKey();
+                c = key.KeyChar;
+                Console.WriteLine(key.Key);
+                if (c >= '1' && c <= '4')
+                {
+                    s = Char.ToString(key.KeyChar);
+                    number = Convert.ToInt32(s);
+                    validInputGiven = true;
+                }
+                else
+                {
+                    Console.WriteLine(" is geen bestaand level");
+                }
+            }
+            return number;
+        }
     }
 }
