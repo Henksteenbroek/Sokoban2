@@ -19,7 +19,7 @@ namespace Sokoban.View
 
         public void showBoard()
         {
-            //Console.Clear();
+            Console.Clear();
             Console.WriteLine("┌──────────┐   ");
             Console.WriteLine("| Sokoban  |   ");
             Console.WriteLine("└──────────┘   ");
@@ -30,6 +30,7 @@ namespace Sokoban.View
 
         public void showStartingScreen()
         {
+            Console.Clear();
             Console.WriteLine("┌────────────────────────────────────────────────────┐");
             Console.WriteLine("| Welkom bij Sokoban                                 |");
             Console.WriteLine("|                                                    |");

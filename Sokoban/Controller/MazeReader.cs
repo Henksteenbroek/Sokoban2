@@ -85,7 +85,7 @@ namespace Sokoban.Model
                     if (y + 1 != fields.GetLength(0) && fields[y + 1, x] != null)
                     {
                         fields[y, x].Down = fields[y + 1, x];
-                        fields[y + 1, x].Up = fields[y + 1, x];
+                        fields[y + 1, x].Up = fields[y, x];
                     }
                 }
             }

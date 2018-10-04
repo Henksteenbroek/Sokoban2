@@ -27,10 +27,24 @@ namespace Sokoban.Controller
 
         public void run()
         {
+            mazeView.showStartingScreen();
+            reader.CreateLinks(reader.ReadMaze(inputView.getMazeNumber()));
             while (true)
             {
                 mazeView.showBoard();
-                game.moveTruck(inputView.readInput(inputView.validInputGiven()));
+                int input = inputView.readInput(inputView.validInputGiven());
+                if (input >= 0)
+                {
+                    game.moveTruck(input);
+                }else if(input == -1)
+                {
+
+                }
+                else
+                {
+                    mazeView.showStartingScreen();
+                    reader.CreateLinks(reader.ReadMaze(inputView.getMazeNumber()));
+                }
             }
         }
     }
