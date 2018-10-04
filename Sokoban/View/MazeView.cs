@@ -17,6 +17,25 @@ namespace Sokoban.View
             this.game = game;
         }
 
+        public void showStartingScreen()
+        {
+            Console.WriteLine("┌────────────────────────────────────────────────────┐");
+            Console.WriteLine("| Welkom bij Sokoban                                 |");
+            Console.WriteLine("|                                                    |");
+            Console.WriteLine("| betekenis van de symbolen   |   doel van het spel  |");
+            Console.WriteLine("|                             |                      |");
+            Console.WriteLine("| spatie : outerspace         |   duw met de truck   |");
+            Console.WriteLine("|      █ : muur               |   de krat(ten)       |");
+            Console.WriteLine("|      · : vloer              |   naar de bestemming |");
+            Console.WriteLine("|      O : krat               |                      |");
+            Console.WriteLine("|      0 : krat op bestemming |                      |");
+            Console.WriteLine("|      x : bestemming         |                      |");
+            Console.WriteLine("|      @ : truck              |                      |");
+            Console.WriteLine("└────────────────────────────────────────────────────┘" + "\n");
+
+            Console.WriteLine("> Kies een doolhof (1 - 4), s = stop");
+        }
+
         public void printFields()
         {
             Field temp1 = game.First;
@@ -37,6 +56,11 @@ namespace Sokoban.View
                 }
             }
             Console.WriteLine(game.Last.FieldChar);
+        }
+
+        public void gameWon()
+        {
+            Console.WriteLine("Hoera, je hebt dit level opgelost");
         }
     }
 }
