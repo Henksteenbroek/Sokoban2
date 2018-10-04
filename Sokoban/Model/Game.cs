@@ -34,5 +34,17 @@ namespace Sokoban.Model
         {
 
         }
+
+        public bool gameFinished()
+        {
+            foreach(Crate item in Crates)
+            {
+                if (!item.OnGoal)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
     }
 }
