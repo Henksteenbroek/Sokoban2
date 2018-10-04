@@ -9,9 +9,9 @@ namespace Sokoban.Model
     public class Field
     {
         public Field Up { get; set; }
-        public Field FieldDown { get; set; }
-        public Field FieldLeft { get; set; }
-        public Field FieldRight { get; set; }
+        public Field Down { get; set; }
+        public Field Left { get; set; }
+        public Field Right { get; set; }
         public int Field_x { get; set; }
         public int Field_y { get; set; }
         public bool hasCrate { get; set; }
@@ -36,7 +36,7 @@ namespace Sokoban.Model
 
         public bool isEmpty()
         {
-            if (Truck == null && Crate == null && FieldType != FieldType.wall)
+            if (hasTruck == true && hasCrate == true && FieldType != FieldType.wall)
             {
                 return true;
             }
@@ -46,11 +46,11 @@ namespace Sokoban.Model
 
         public void assignCharacter()
         {
-            if (hasTruck())
+            if (hasTruck == true)
             {
                 FieldChar = '@';
                 return;
-            }else if (hasCrate())
+            }else if (hasCrate == true)
             {
                 FieldChar = 'O';
                 return;

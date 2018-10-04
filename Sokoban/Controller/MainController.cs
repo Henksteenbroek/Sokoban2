@@ -12,7 +12,7 @@ namespace Sokoban.Controller
     {
         Game game;
         MazeReader reader;
-        InputView inputView;
+        //InputView inputView;
         MazeView mazeView;
         public MainController()
         {

@@ -12,17 +12,17 @@ namespace Sokoban.Model
         public int Maze_y { get; set; }
         public Field First { get; set; }
         public Field Last { get; set; }
-        public List<Crate> Crates { get; set; }
+        public List<Field> Crates { get; set; }
         public Field Truck { get; set; }
 
         public Game()
         {
-            Crates = new List<Crate>();
+            Crates = new List<Field>();
         }
 
         public void moveTruck(Direction direction)
         {
-            
+
         }
 
         public void moveCrate(Direction direction)
@@ -32,19 +32,19 @@ namespace Sokoban.Model
 
         public bool hasClearPath(Direction direction)
         {
-
-        }
-
-        public bool gameFinished()
-        {
-            foreach(Crate item in Crates)
-            {
-                if (!item.OnGoal)
-                {
-                    return false;
-                }
-            }
             return true;
         }
+
+        //public bool gameFinished()
+        //{
+        //    foreach (Field item in Crates)
+        //    {
+        //        if (!item.OnGoal)
+        //        {
+        //            return false;
+        //        }
+        //    }
+        //    return true;
+        //}
     }
 }

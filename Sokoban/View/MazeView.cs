@@ -46,12 +46,12 @@ namespace Sokoban.View
                 if (temp1 != null)
                 {
                     Console.Write(temp1.FieldChar);
-                    temp1 = temp1.FieldRight;
+                    temp1 = temp1.Right;
                 }
-                else if (temp2.FieldDown != null)
+                else if (temp2.Down != null)
                 {
-                    temp1 = temp2.FieldDown;
-                    temp2 = temp2.FieldDown;
+                    temp1 = temp2.Down;
+                    temp2 = temp2.Down;
                     Console.WriteLine();
                 }
             }
