@@ -43,12 +43,12 @@ namespace Sokoban.Model
                         case 'o':
                             levelFields[y, x] = new Field(FieldType.floor);
                             levelFields[y, x].Crate = new Crate();
-                            game.Crates.Add(levelFields[y, x]);
+                            game.Crates.Add(levelFields[y, x].Crate);
                             break;
                         case '@':
                             levelFields[y, x] = new Field(FieldType.floor);
-                            levelFields[y, x].Truck = new Truck();
-                            game.Truck = levelFields[y, x];
+                            levelFields[y, x].Truck = game.Truck = new Truck();
+                            game.Truck.Location = levelFields[y, x];
                             break;
                         default:
                             levelFields[y, x] = null;

@@ -9,11 +9,7 @@ namespace Sokoban.Model
 {
     public class Truck
     {
-        public void move(Direction direction)
-        {
-
-        }
+        
     }
 
-    
 }

@@ -6,13 +6,8 @@ using System.Threading.Tasks;
 
 namespace Sokoban.Model
 {
-    public class Crate
+    public class Crate : MoveableObject
     {
         public bool OnGoal { get; set; }
-
-        public void move(Direction direction)
-        {
-
-        }
     }
 }

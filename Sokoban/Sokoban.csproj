@@ -51,6 +51,7 @@
     <Compile Include="Model\FieldType.cs" />
     <Compile Include="Model\Game.cs" />
     <Compile Include="Controller\MazeReader.cs" />
+    <Compile Include="Model\MoveableObject.cs" />
     <Compile Include="Model\Truck.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\InputView.cs" />

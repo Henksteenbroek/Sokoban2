@@ -12,12 +12,27 @@ namespace Sokoban.Model
         public int Maze_y { get; set; }
         public Field First { get; set; }
         public Field Last { get; set; }
-        public List<Field> Crates { get; set; }
+        public List<Crate> Crates { get; set; }
         public Field Truck { get; set; }
 
         public Game()
         {
-            Crates = new List<Field>();
+            Crates = new List<Crate>();
+        }
+
+        public void moveTruck(Direction direction)
+        {
+            
+        }
+
+        public void moveCrate(Direction direction)
+        {
+
+        }
+
+        public bool hasClearPath(Direction direction)
+        {
+
         }
     }
 }

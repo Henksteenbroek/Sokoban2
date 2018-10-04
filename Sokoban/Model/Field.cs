@@ -8,14 +8,14 @@ namespace Sokoban.Model
 {
     public class Field
     {
-        public Field FieldUp { get; set; }
+        public Field Up { get; set; }
         public Field FieldDown { get; set; }
         public Field FieldLeft { get; set; }
         public Field FieldRight { get; set; }
         public int Field_x { get; set; }
         public int Field_y { get; set; }
-        public Crate Crate { get; set; }
-        public Truck Truck { get; set; }
+        public bool hasCrate { get; set; }
+        public bool hasTruck { get; set; }
         public FieldType FieldType { get; set; }
         public char FieldChar { get; set; }
 
@@ -26,12 +26,12 @@ namespace Sokoban.Model
 
         public void removeTruck()
         {
-            Truck = null;
+            hasTruck = false;
         }
 
         public void removeCrate()
         {
-            Crate = null;
+            hasCrate = false;
         }
 
         public bool isEmpty()
@@ -43,23 +43,6 @@ namespace Sokoban.Model
             return false;
         }
 
-        public bool hasCrate()
-        {
-            if (Crate == null)
-            {
-                return false;
-            }
-            return true;
-        }
-
-        public bool hasTruck()
-        {
-            if (Truck == null)
-            {
-                return false;
-            }
-            return true;
-        }
 
         public void assignCharacter()
         {

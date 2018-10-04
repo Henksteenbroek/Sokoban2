@@ -22,6 +22,7 @@ namespace Sokoban.Controller
             reader.CreateLinks(reader.ReadMaze(1));
             mazeView = new MazeView(game);
             mazeView.printFields();
+
         }
     }
 }
